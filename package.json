@@ -1,11 +1,15 @@
 {
   "name": "@dsd486/dsh-sync",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "DSH 分类配置与文件同步：设置 UI、敏感类别确认、GitHub 双向同步与 Agent 排障工具。",
   "type": "module",
   "main": "src/index.js",
+  "bin": {
+    "dsh-sync": "./src/cli.js"
+  },
   "files": [
     "src",
+    "scripts",
     "docs",
     "contributing",
     "cordis.patch.yml",
