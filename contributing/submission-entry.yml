@@ -1,0 +1,8 @@
+# awesome-dsh-plugin 收录条目 —— 放到列表仓库的 data/plugins/YSparkle__dsh-sync-plugin.yml
+# 规则出处：contributing.md（一个文件即全部投稿；README 由脚本生成，勿手改）
+url: https://github.com/YSparkle/dsh-sync-plugin
+name: YSparkle/dsh-sync-plugin
+category: dev
+description:
+  en: "Config sync for DSH: pushes profile configuration (model providers, plugin manifests) to your private GitHub repo and restores it on another machine with pull, with plaintext-secret scanning, per-pull backups and rollback."
+  zh: "把 DSH 的配置（模型供应商、插件清单）推送到你的私有 GitHub 仓库，在新机器上拉取恢复；带明文密钥扫描、每次拉取前备份与回滚。"

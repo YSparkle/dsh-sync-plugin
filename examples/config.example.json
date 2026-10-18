@@ -1,0 +1,10 @@
+{
+  "repo": "owner/private-repo",
+  "branch": "main",
+  "remotePrefix": "dsh-sync",
+  "tokenRef": "env:DSH_SYNC_TOKEN",
+  "categories": ["core", "skills"],
+  "confirmedSensitive": [],
+  "includeSecrets": false,
+  "mirrorDeletes": false
+}

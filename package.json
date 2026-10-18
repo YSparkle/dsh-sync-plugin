@@ -1,0 +1,77 @@
+{
+  "name": "@dsd486/dsh-sync",
+  "version": "0.2.2",
+  "description": "DSH 分类配置与文件同步：设置 UI、敏感类别确认、GitHub 双向同步与 Agent 排障工具。",
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "docs",
+    "contributing",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "client.js"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    },
+    "engines": {
+      "dsh": "0.2.0-rc.2"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YSparkle/dsh-sync-plugin.git"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-client-ui-settings": "0.2.0-rc.2",
+    "react": "^18.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-client-ui-settings": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "sync",
+    "github",
+    "profile",
+    "backup",
+    "models",
+    "plugins"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "test": "node scripts/selfcheck.js && node --test scripts/categories.test.js",
+    "test:sdk": "node scripts/check-sdk.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,9 @@
+# dsh-sync bundle patch —— 把「配置同步」工具插件插入 profile 配置树。
+# 与 smart-dl 同构：dsh 在安装/加载本插件时读取本文件（由 package.json 的
+# dsh.bundle.patch 声明），把下面的 insert 行合入 profile 的 cordis 树。
+- insert:
+    - id: dsh-sync
+      name: '@dsd486/dsh-sync'
+      # 纯 insert 行（不带 config）：dshmarket 的热挂载只认纯 insert；
+      # branch/remotePrefix 等默认值由代码兜底（'main'/'dsh-sync'），
+      # 用户配置由设置 UI 与 sync_config 共用本地配置文件。
